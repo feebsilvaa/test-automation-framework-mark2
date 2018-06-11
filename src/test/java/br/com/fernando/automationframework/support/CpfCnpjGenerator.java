@@ -3,10 +3,25 @@ import java.util.InputMismatchException;
 
 public class CpfCnpjGenerator {
 
-    private boolean comPontos = true;
+    private boolean comPontos = false;
 
     public void setComPontos(boolean comPontos) {
         this.comPontos = comPontos;
+    }
+
+    public static void main(String[] args) {
+        CpfCnpjGenerator gerador = new CpfCnpjGenerator();
+
+        for (int i = 0; i < 20; i++) {
+            String cpf = gerador.cpf(true);
+            System.out.printf("CPF: %s, Valido: %s\n", cpf, gerador.isCPF(cpf));
+        }
+
+        for (int i = 0; i < 20; i++) {
+            String cnpj = gerador.cnpj(false);
+            System.out.printf("CNPJ: %s, Valido: %s\n", cnpj, gerador.isCNPJ(cnpj));
+        }
+
     }
 
     private int randomiza(int n) {
@@ -18,7 +33,10 @@ public class CpfCnpjGenerator {
         return (int) Math.round(dividendo - (Math.floor(dividendo / divisor) * divisor));
     }
 
-    public String cpf() {
+    public String cpf(boolean comPontuacao) {
+        if (comPontuacao) {
+            this.comPontos = true;
+        }
         int n = 9;
         int n1 = randomiza(n);
         int n2 = randomiza(n);
@@ -54,7 +72,12 @@ public class CpfCnpjGenerator {
         return retorno;
     }
 
-    public String cnpj() {
+    public String cnpj(boolean comPontuacao) {
+
+        if (comPontuacao) {
+            this.comPontos = true;
+        }
+
         int n = 9;
         int n1 = randomiza(n);
         int n2 = randomiza(n);
@@ -90,15 +113,6 @@ public class CpfCnpjGenerator {
             retorno = "" + n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10 + n11 + n12 + d1 + d2;
 
         return retorno;
-    }
-
-    public static void main(String[] args) {
-        CpfCnpjGenerator gerador = new CpfCnpjGenerator();
-        String cpf = gerador.cpf();
-        System.out.printf("CPF: %s, Valido: %s\n", cpf, gerador.isCPF(cpf));
-
-        String cnpj = gerador.cnpj();
-        System.out.printf("CNPJ: %s, Valido: %s\n", cnpj, gerador.isCNPJ(cnpj));
     }
 
     private void pontuacao() {

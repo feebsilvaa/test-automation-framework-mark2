@@ -1,11 +1,11 @@
 package br.com.fernando.automationframework.core;
 
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +14,43 @@ import static br.com.fernando.automationframework.core.DriverFactory.getDriver;
 
 public class BasePage {
 
+
+    protected static String cnpjForTest;
+    protected static String cpfForTest;
+    private Actions acoes;
+
+
+    /********* Titulo da página ************/
+
     public String tituloPagina() {
         return getDriver().getTitle();
     }
 
-    public String capturarMensagemAlerta() {
-        return obterTexto(By.className("alert"));
+    /********* Acoes ************/
+
+    public void rolarFinalPagina() {
+        acoes = new Actions(getDriver());
+        acoes.sendKeys(Keys.END).perform();
+    }
+
+    public void rolarTopoPagina() {
+        acoes = new Actions(getDriver());
+        acoes.sendKeys(Keys.HOME).perform();
+    }
+
+    public void rolarAteElemento(WebElement element) {
+        acoes = new Actions(getDriver());
+        acoes.moveToElement(element).perform();
+    }
+
+    /********* Mensagens de sucesso ou falha ************/
+
+    public String obterTextoAlerta() {
+
+        WebElement alert = getDriver().findElement(By.className("mat-simple-snackbar"));
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOf(alert));
+        return alert.getText();
     }
 
     /********* TextField e TextArea ************/
@@ -29,9 +60,19 @@ public class BasePage {
         getDriver().findElement(by).sendKeys(texto);
     }
 
-    public void escrever(String id_campo, String texto){
-        escrever(By.id(id_campo), texto);
+    public void escrever(String cssSelector, String texto){
+        getDriver().findElement(By.cssSelector(cssSelector)).clear();
+        getDriver().findElement(By.cssSelector(cssSelector)).sendKeys(texto);
     }
+
+    public void escrever(WebElement element, String texto){
+        element.clear();
+        element.sendKeys(texto);
+    }
+
+    /*public void escrever(String id_campo, String texto){
+        escrever(By.id(id_campo), texto);
+    }*/
 
     public String obterValorCampo(String id_campo) {
         return getDriver().findElement(By.id(id_campo)).getAttribute("value");
@@ -60,6 +101,10 @@ public class BasePage {
 
     public void clicarCheck(String id) {
         getDriver().findElement(By.id(id)).click();
+    }
+
+    public void clicarCheck(By by) {
+        getDriver().findElement(by).click();
     }
 
     public boolean isCheckMarcado(String id){
@@ -136,12 +181,28 @@ public class BasePage {
 
     /********* Botao ************/
 
+    public void clicarElemento(By by) {
+        getDriver().findElement(by).click();
+    }
+
+    public void clicarElemento(String cssSelector) {
+        getDriver().findElement(By.cssSelector(cssSelector)).click();
+    }
+
+    public void clicarElemento(WebElement element) {
+        element.click();
+    }
+
+    public void clicarBotao(WebElement element) {
+        element.click();
+    }
+
     public void clicarBotao(By by) {
         getDriver().findElement(by).click();
     }
 
-    public void clicarBotao(String id) {
-        getDriver().findElement(By.id(id)).click();
+    public void clicarBotao(String cssSelector) {
+        getDriver().findElement(By.cssSelector(cssSelector)).click();
     }
 
     public String obterValueElemento(String id) {
@@ -154,8 +215,12 @@ public class BasePage {
         getDriver().findElement(by).click();
     }
 
-    public void clicarLink(String link) {
+    /*public void clicarLink(String link) {
         getDriver().findElement(By.linkText(link)).click();
+    }
+    */
+    public void clicarLink(String cssSelector) {
+        getDriver().findElement(By.cssSelector(cssSelector)).click();
     }
 
     /********* Textos ************/
@@ -164,8 +229,8 @@ public class BasePage {
         return getDriver().findElement(by).getText();
     }
 
-    public String obterTexto(String xpath) {
-        return obterTexto(By.xpath(xpath));
+    public String obterTexto(String cssSelector) {
+        return obterTexto(By.cssSelector(cssSelector));
     }
 
     /********* Alerts ************/

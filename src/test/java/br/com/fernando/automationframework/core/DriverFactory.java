@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -39,24 +40,29 @@ public class DriverFactory {
                 switch (FrameworkProperties.BROWSER) {
                     case MOZILLA_FIREFOX:
                         driver = new FirefoxDriver();
+                        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
                         driver.get(webPageUrl);
-                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         break;
                     case GOOGLE_CHROME:
-                        driver = new ChromeDriver();
+                        ChromeOptions options = new ChromeOptions();
+                        options.addArguments("headless");
+                        driver = new ChromeDriver(options);
+                        //driver = new ChromeDriver();
+                        //driver.manage().window().setPosition(new Point(1300, 100));
                         driver.manage().window().maximize();
-                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+
                         driver.get(webPageUrl);
                         break;
                     case INTERNET_EXPLORER:
                         driver = new InternetExplorerDriver();
                         driver.manage().window().maximize();
-                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
                         driver.get(webPageUrl);
                         break;
                     case MICROSOFT_EDGE:
                         driver = new EdgeDriver();
-                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
                         driver.get(webPageUrl);
                         break;
                 }

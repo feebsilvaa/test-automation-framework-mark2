@@ -26,7 +26,7 @@ public class Screenshot {
     public static void takeAPrint(String picName) throws Exception{
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        //Definindo a dimensÃ£o que quer capturar
+        //Definindo a dimensão que quer capturar
         //pode ser definido o tamanho que desejar
         Dimension screenSize = toolkit.getScreenSize();
         Rectangle screenRect = new Rectangle(screenSize);
@@ -34,10 +34,10 @@ public class Screenshot {
         Robot robot = new Robot();
         BufferedImage screenCapturedImage = robot.createScreenCapture(screenRect);
 
-        //depois disso Ã© sÃ³ procurar a imagem no local indicado abaixo, no meu caso em:
+        //depois disso é só procurar a imagem no local indicado abaixo, no meu caso em:
         // /Users/rodrigogomes/printScreen.png
-        //Aqui vocÃª pode alterar o formato da imagem para, por exemplo, JPG
-        //Ã‰ sÃ³ mudar o â€œpngâ€� para â€œjpgâ€� e pronto
+        //Aqui você pode alterar o formato da imagem para, por exemplo, JPG
+        //É só mudar o “png” para “jpg” e pronto
         StringBuilder path = new StringBuilder();
         path.append("report").append(File.separator).append(picName).append(".png");
         ImageIO.write(screenCapturedImage, "png", new File(path.toString()));

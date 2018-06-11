@@ -4,7 +4,7 @@ public class FrameworkProperties {
 
     public static boolean CLOSE_BROWSER = true;
 
-    public static Browsers BROWSER = Browsers.MOZILLA_FIREFOX;
+    public static Browsers BROWSER = Browsers.GOOGLE_CHROME;
 
     public static TipoExecucao TIPO_EXECUCAO = TipoExecucao.LOCAL;
 
