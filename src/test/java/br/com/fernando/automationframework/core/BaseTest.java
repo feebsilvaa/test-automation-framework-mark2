@@ -48,7 +48,7 @@ public class BaseTest {
 
 	@AfterClass
 	public static void tearDownClass() {
-		killProccess();
+		killWindowsProccess();
 	}
 
 	@Before
@@ -115,33 +115,40 @@ public class BaseTest {
 				height);
 	}
 
-	public static boolean killProccess() {
-
-		String processo = "";
-
+	public static boolean killWindowsProccess() {
+		String processo = null;
+		
+		// Chromedriver
 		if (FrameworkProperties.BROWSER == Browsers.GOOGLE_CHROME) {
-			processo = "chromedriver";
+			processo = "chromedriver.exe";
 		}
+		// Geckodriver
 		if (FrameworkProperties.BROWSER == Browsers.MOZILLA_FIREFOX) {
-			processo = "geckodriver";
+			processo = "geckodriver.exe";
 		}
-
-		try {
-			String line;
-			Process p = Runtime.getRuntime().exec("tasklist.exe /fo csv /nh");
-			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			while ((line = input.readLine()) != null) {
-				if (!line.trim().equals("")) {
-					if (line.substring(1, line.indexOf("\"", 1)).equalsIgnoreCase(processo)) {
-						Runtime.getRuntime().exec("taskkill /F /IM " + line.substring(1, line.indexOf("\"", 1)));
-						return true;
+		
+		// No Windows
+		if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+			try {
+				String line;
+				Process p = Runtime.getRuntime().exec("tasklist.exe /fo csv /nh");
+				BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+				while ((line = input.readLine()) != null) {
+					if (!line.trim().equals("")) {
+						if (line.substring(1, line.indexOf("\"", 1)).equalsIgnoreCase(processo)) {
+							Runtime.getRuntime().exec("taskkill /F /IM " + line.substring(1, line.indexOf("\"", 1)));
+							return true;
+						}
 					}
 				}
+				input.close();
+			} catch (Exception err) {
+				err.printStackTrace();
 			}
-			input.close();
-		} catch (Exception err) {
-			err.printStackTrace();
 		}
+		// No Linux
+		
+		// No Mac 
 		return false;
 	}
 
