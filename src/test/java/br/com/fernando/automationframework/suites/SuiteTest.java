@@ -13,9 +13,6 @@ public class SuiteTest {
 
     @BeforeClass
     public static void resetDados() {
-        // L�gica para limpar a base de dados
-        // Finalizar inst�ncia do driver
-        // killDriver();
     }
 
 }

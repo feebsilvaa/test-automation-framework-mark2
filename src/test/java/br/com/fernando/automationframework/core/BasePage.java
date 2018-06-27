@@ -14,7 +14,6 @@ import static br.com.fernando.automationframework.core.DriverFactory.getDriver;
 
 public class BasePage {
 
-
     protected static String cnpjForTest;
     protected static String cpfForTest;
     private Actions acoes;
@@ -27,6 +26,16 @@ public class BasePage {
     }
 
     /********* Acoes ************/
+
+    public void rolarPaginaParaCima() {
+        acoes = new Actions(getDriver());
+        acoes.sendKeys(Keys.PAGE_UP).perform();
+    }
+
+    public void rolarPaginaParaBaixo() {
+        acoes = new Actions(getDriver());
+        acoes.sendKeys(Keys.PAGE_DOWN).perform();
+    }
 
     public void rolarFinalPagina() {
         acoes = new Actions(getDriver());
@@ -41,6 +50,16 @@ public class BasePage {
     public void rolarAteElemento(WebElement element) {
         acoes = new Actions(getDriver());
         acoes.moveToElement(element).perform();
+    }
+
+    public void apertarTeclaEnter() {
+        acoes = new Actions(getDriver());
+        acoes.sendKeys(Keys.ENTER).perform();
+    }
+
+    public void apertarTeclaTab() {
+        acoes = new Actions(getDriver());
+        acoes.sendKeys(Keys.TAB).perform();
     }
 
     /********* Mensagens de sucesso ou falha ************/
@@ -78,6 +97,10 @@ public class BasePage {
         return getDriver().findElement(By.id(id_campo)).getAttribute("value");
     }
 
+    public void submeterForm(By by) {
+        getDriver().findElement(by).submit();
+    }
+
     /********* Radio e Check ************/
 
     public void clicarRadio(By by) {
@@ -87,12 +110,8 @@ public class BasePage {
     /* public void clicarRadio(String id) {
          clicarRadio(By.id(id));
      }*/
-    public void clicarRadio(String opcao) {
-        if ("Pago".equals(opcao)) {
-            clicarRadio(By.id("status_pago"));
-        } else if ("Pendente".equals(opcao)) {
-            clicarRadio(By.id("status_pendente"));
-        }
+    public void clicarRadio(String cssSelector) {
+        clicarRadio(By.cssSelector(cssSelector));
     }
 
     public boolean isRadioMarcado(String id){
@@ -119,10 +138,16 @@ public class BasePage {
         combo.selectByVisibleText(valor);
     }
 
-    public void selecionarCombo(String id, String valor) {
-        WebElement element = getDriver().findElement(By.id(id));
+    public void selecionarOpcaoComboPorValor(By by, String valor) {
+        WebElement element = getDriver().findElement(by);
         Select combo = new Select(element);
         combo.selectByVisibleText(valor);
+    }
+
+    public void selecionarOpcaoComboPorId(By by, int valor) {
+        WebElement element = getDriver().findElement(by);
+        Select combo = new Select(element);
+        combo.selectByIndex(valor);
     }
 
     public void deselecionarCombo(By by, String valor) {

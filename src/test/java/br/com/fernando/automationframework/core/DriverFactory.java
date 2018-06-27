@@ -4,9 +4,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -44,11 +44,11 @@ public class DriverFactory {
                         driver.get(webPageUrl);
                         break;
                     case GOOGLE_CHROME:
-                        ChromeOptions options = new ChromeOptions();
+                        /*ChromeOptions options = new ChromeOptions();
                         options.addArguments("headless");
-                        driver = new ChromeDriver(options);
-                        //driver = new ChromeDriver();
-                        //driver.manage().window().setPosition(new Point(1300, 100));
+                        driver = new ChromeDriver(options);*/
+                        driver = new ChromeDriver();
+                        driver.manage().window().setPosition(new Point(1300, 100));
                         driver.manage().window().maximize();
                         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 
