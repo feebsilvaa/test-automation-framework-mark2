@@ -16,26 +16,24 @@ import br.com.fernando.automationframework.pages.Page;
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = "ModelTest.csv")
 public class ModelTest extends BaseTest {
-	
+
 	private Page page = new Page();
 	@Rule
 	public ErrorCollector error = new ErrorCollector();
 
-    @Test
-    public void acessarPaginaGoogle(
-            @Param(name="tituloPagina")String tituloPagina
-    ) throws Exception  {
-    	try {
-    		String title = page.tituloPagina();
-            evidence();            
-            assertEquals(tituloPagina, title);
-            
-            resultadoDoTeste = "Passed";
+	@Test
+	public void acessarPaginaGoogle(@Param(name = "tituloPagina") String tituloPagina) throws Exception {
+		try {
+			String title = page.tituloPagina();
+			evidence();
+			assertEquals(tituloPagina, title);
+
+			resultadoDoTeste = "Passed";
 		} catch (Exception e) {
-            inserirErroEvidencia(e.toString());
-            resultadoDoTeste = "Failed";
+			inserirErroEvidencia(e.toString());
+			resultadoDoTeste = "Failed";
 			throw e;
 		}
-    }
+	}
 
 }
