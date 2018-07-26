@@ -1,6 +1,9 @@
 # Automation Framework
 
 Framework de Automação de Testes Funcionais para aplicações Web
+- Report HTML
+- Arquivo de Log
+- Massa de dados via planilha csv
 
 ## Releases
 

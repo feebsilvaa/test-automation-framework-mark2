@@ -47,7 +47,7 @@ public class Screenshot {
 		// Salva somente a primeira parte da String
 		StringBuilder picname = new StringBuilder(methodName.split("\\{")[0]);
 		// Acrescenta data e hora ao restante do nome da foto
-		picname.append("_").append(Generator.dataHoraParaArquivo());
+		picname.append("_").append(DataHoraGen.dataHoraParaArquivo());
 
 		StringBuilder path = new StringBuilder();
 		path.append("report").append(File.separator).append(picname).append(".png");
