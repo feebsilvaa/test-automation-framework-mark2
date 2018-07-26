@@ -24,7 +24,7 @@ public class DriverFactory {
     private static final String USERNAME = "feebsilvaa";
     private static final String AUTOMATE_KEY = "chave";
 
-    private static String webPageUrl = "http://www.google.com";
+    private static String webPageUrl = "https://mark7.herokuapp.com/login";
 
     private DriverFactory() {}
 

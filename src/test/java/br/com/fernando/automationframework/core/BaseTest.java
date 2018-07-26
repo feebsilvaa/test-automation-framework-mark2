@@ -2,24 +2,18 @@ package br.com.fernando.automationframework.core;
 
 import static br.com.fernando.automationframework.core.DriverFactory.getDriver;
 import static br.com.fernando.automationframework.core.DriverFactory.killDriver;
-import static br.com.fernando.automationframework.support.Generator.arquivoSaidaDocx;
-import static br.com.fernando.automationframework.support.Generator.evidenciaArquivoWord;
-import static br.com.fernando.automationframework.support.Screenshot.screenshotByte;
+import static br.com.fernando.automationframework.support.DataHoraGen.dataHoraParaArquivo;
+import static br.com.fernando.automationframework.support.HTMLReportGen.htmlReport;
+import static br.com.fernando.automationframework.support.HTMLReportGen.htmlReportConfig;
+import static org.apache.commons.lang.WordUtils.capitalizeFully;
 
+import java.awt.Desktop;
 import java.io.BufferedReader;
-import java.io.FileOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.xwpf.usermodel.Document;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -27,97 +21,76 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import br.com.fernando.automationframework.core.FrameworkProperties.Browsers;
-import br.com.fernando.automationframework.support.CustomXWPFDocument;
 
 public class BaseTest {
-	protected Map<String, String> dadosDoTeste;
 
-	protected String resultadoDoTeste;
-
-	public static FileOutputStream fileOutput = null;
-	public static CustomXWPFDocument evidenciaDocx = null;
+	protected static ExtentHtmlReporter htmlReporter;
+	protected static ExtentReports extent;
+	protected static ExtentTest test;
+	protected static String reportName;
+	protected static String className;
+	protected StringBuilder nomeCenario = new StringBuilder();
 
 	@Rule
 	public TestName testName = new TestName();
 
 	@BeforeClass
 	public static void setUpClass() {
-		getDriver();
+		// start reporters
+		reportName = htmlReport("ExtentReportHTML");
+		htmlReporter = new ExtentHtmlReporter(reportName);
+		// create ExtentReports and attach reporter(s)
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
 	}
 
 	@AfterClass
-	public static void tearDownClass() {
+	public static void tearDownClass() throws IOException {
 		killWindowsProccess();
+		// Ao final do teste abre o arquivo de report HTML
+		Desktop.getDesktop().open(new File(reportName));
 	}
 
 	@Before
 	public void setUpTest() throws IOException {
-		// Gera arquivo de evidencia a partir de um modelo
-		evidenciaDocx = evidenciaArquivoWord(testName.getMethodName());
-		dadosDoTeste = new HashMap<String, String>();
-		resultadoDoTeste = "Failed";
+		// creates a toggle for the given test, adds all log events under it
+		htmlReportConfig(htmlReporter, getClass().getSimpleName());
+		
+		String test_name = testName.getMethodName().split("\\{")[0].replaceAll("_", " ");
+		
+		nomeCenario.append(capitalizeFully(test_name)).append(" - ").append(dataHoraParaArquivo("dd/MM/yy - HH:mm:ss"))
+				.toString();
 	}
 
 	@After
-	public void tearDownTest() {
+	public void tearDownTest() throws Exception {
 		try {
-			// Salva a evidência montada em um arquivo word .docx
-			fileOutput = arquivoSaidaDocx(testName.getMethodName(), evidenciaDocx, dadosDoTeste, resultadoDoTeste);
-			evidenciaDocx.write(fileOutput);
-			// converToPdf(evidenciaDocx, testName.getMethodName());
-			fileOutput.flush();
-			fileOutput.close();
-
-			if (FrameworkProperties.CLOSE_BROWSER) {
-				killDriver();
-			}
-
+			extent.flush();
 		} catch (Exception e) {
-			resultadoDoTeste = "Failed";
-			inserirErroEvidencia(e.toString());
+			test.log(Status.FAIL, e.getMessage());
+			throw e;
 		}
 
-	}
-
-	protected static void inserirDadosTesteEvidencia(Map dadosDoTeste) {
-
-		Set<Map.Entry<String, String>> set = dadosDoTeste.entrySet();
-		Iterator it = set.iterator();
-
-		XWPFParagraph par1 = evidenciaDocx.createParagraph();
-		XWPFRun runpar1 = par1.createRun();
-		runpar1.setText("DADOS UTILIZADOS NO TESTE");
-		while (it.hasNext()) {
-			Map.Entry<String, String> entry = (Map.Entry) it.next();
-			runpar1.addBreak();
-			StringBuilder str = new StringBuilder();
-			str.append(String.valueOf(entry.getKey())).append(": ").append(String.valueOf(entry.getValue()));
-			runpar1.setText(str.toString());
-		}
-	}
-
-	protected static void inserirErroEvidencia(String erro) {
-		XWPFParagraph par1 = evidenciaDocx.createParagraph();
-		XWPFRun runpar1 = par1.createRun();
-		runpar1.addBreak();
-		runpar1.addBreak();
-		runpar1.setText(erro);
-		runpar1.setColor("FF0000");
 	}
 
 	protected static void evidence() throws InvalidFormatException, InterruptedException {
-		int width = (int) (1280 * 0.53);
+		/*int width = (int) (1280 * 0.53);
 		int height = (int) (720 * 0.53);
 		Thread.sleep(500);
 		String blipId = evidenciaDocx.addPictureData(screenshotByte(), XWPFDocument.PICTURE_TYPE_PNG);
 		evidenciaDocx.createPicture(blipId, evidenciaDocx.getNextPicNameNumber(Document.PICTURE_TYPE_PNG), width,
-				height);
+				height);*/
 	}
 
 	public static boolean killWindowsProccess() {
 		String processo = null;
-		
+
 		// Chromedriver
 		if (FrameworkProperties.BROWSER == Browsers.GOOGLE_CHROME) {
 			processo = "chromedriver.exe";
@@ -126,7 +99,7 @@ public class BaseTest {
 		if (FrameworkProperties.BROWSER == Browsers.MOZILLA_FIREFOX) {
 			processo = "geckodriver.exe";
 		}
-		
+
 		// No Windows
 		if (System.getProperty("os.name").toLowerCase().contains("windows")) {
 			try {
@@ -147,8 +120,8 @@ public class BaseTest {
 			}
 		}
 		// No Linux
-		
-		// No Mac 
+
+		// No Mac
 		return false;
 	}
 
