@@ -4,6 +4,7 @@ Framework de Automação de Testes Funcionais para aplicações Web
 - Report HTML
 - Arquivo de Log
 - Massa de dados via planilha csv
+- Print do resultado final no report html
 
 ## Releases
 
