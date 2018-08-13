@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -42,6 +43,9 @@ public class BaseTest {
 
 	@BeforeClass
 	public static void setUpClass() {
+
+		PropertyConfigurator.configure("conf/log4j.properties");
+		
 		// start reporters
 		reportName = htmlReport("ExtentReportHTML");
 		htmlReporter = new ExtentHtmlReporter(reportName);
