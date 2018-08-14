@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -25,14 +27,17 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import br.com.fernando.automationframework.core.FrameworkProperties.Browsers;
+import br.com.fernando.automationframework.support.LoggerUtils;
 
 public class BaseTest {
+
+	private static final Logger log = Logger.getLogger(BaseTest.class);
+	private static String className = BaseTest.class.getName();
 
 	protected static ExtentHtmlReporter htmlReporter;
 	protected static ExtentReports extent;
 	protected static ExtentTest test;
 	protected static String reportName;
-	protected static String className;
 	protected StringBuilder nomeCenario = new StringBuilder();
 
 	@Rule
@@ -40,50 +45,60 @@ public class BaseTest {
 
 	@BeforeClass
 	public static void setUpClass() {
+		// Configurando Log4J
+		PropertyConfigurator.configure("conf/log4j.properties");
 		// start reporters
-		reportName = htmlReport("ExtentReportHTML");
+		log.info(LoggerUtils.INFO_TAG(className, "Inicializando report HTML"));
+		reportName = htmlReport("ReportHtml");
 		htmlReporter = new ExtentHtmlReporter(reportName);
 		// create ExtentReports and attach reporter(s)
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 	}
 
-	@AfterClass
-	public static void tearDownClass() throws IOException {
-		// Ao final do teste abre o arquivo de report HTML
-		Desktop.getDesktop().open(new File(reportName));
-		killWindowsProccess();
-	}
-
 	@Before
 	public void setUpTest() throws IOException {
+		String test_name = testName.getMethodName().split("\\{")[0].replaceAll("_", " ");
+		log.info(LoggerUtils.INFO_TAG(className, "Inicializando setup do teste: " + capitalizeFully(test_name)));
 		// creates a toggle for the given test, adds all log events under it
 		htmlReportConfig(htmlReporter, getClass().getSimpleName());
-		
-		String test_name = testName.getMethodName().split("\\{")[0].replaceAll("_", " ");
-		
 		nomeCenario.append(capitalizeFully(test_name)).append(" - ").append(dataHoraParaArquivo("dd/MM/yy - HH:mm:ss"))
 				.toString();
 	}
 
 	@After
 	public void tearDownTest() throws Exception {
+		String test_name = testName.getMethodName().split("\\{")[0].replaceAll("_", " ");
+		log.info(LoggerUtils.INFO_TAG(className, "Finalizando teste: " + capitalizeFully(test_name)));
 		try {
+			log.info(LoggerUtils.INFO_TAG(className, "Salvando report HTML: " + capitalizeFully(test_name)));
 			extent.flush();
 		} catch (Exception e) {
+			log.error(LoggerUtils.ERROR_TAG(className, e.getMessage()));
 			test.log(Status.FAIL, e.getMessage());
 			throw e;
 		}
 
 	}
 
+	@AfterClass
+	public static void tearDownClass() throws IOException {
+		// Ao final do teste abre o arquivo de report HTML
+		log.info(LoggerUtils.INFO_TAG(className, "Exibindo report HTML: " + reportName));
+		Desktop.getDesktop().open(new File(reportName));
+		log.info(LoggerUtils.INFO_TAG(className, "Finalizando processos"));
+		killWindowsProccess();
+	}
+
 	protected static void evidence() throws InvalidFormatException, InterruptedException {
-		/*int width = (int) (1280 * 0.53);
-		int height = (int) (720 * 0.53);
-		Thread.sleep(500);
-		String blipId = evidenciaDocx.addPictureData(screenshotByte(), XWPFDocument.PICTURE_TYPE_PNG);
-		evidenciaDocx.createPicture(blipId, evidenciaDocx.getNextPicNameNumber(Document.PICTURE_TYPE_PNG), width,
-				height);*/
+		/*
+		 * int width = (int) (1280 * 0.53); int height = (int) (720 * 0.53);
+		 * Thread.sleep(500); String blipId =
+		 * evidenciaDocx.addPictureData(screenshotByte(),
+		 * XWPFDocument.PICTURE_TYPE_PNG); evidenciaDocx.createPicture(blipId,
+		 * evidenciaDocx.getNextPicNameNumber(Document.PICTURE_TYPE_PNG), width,
+		 * height);
+		 */
 	}
 
 	public static boolean killWindowsProccess() {
@@ -91,6 +106,10 @@ public class BaseTest {
 
 		// Chromedriver
 		if (FrameworkProperties.BROWSER == Browsers.GOOGLE_CHROME) {
+			processo = "chromedriver.exe";
+		}
+		// Chromedriver Headless
+		if (FrameworkProperties.BROWSER == Browsers.GOOGLE_CHROME_HEADLESS) {
 			processo = "chromedriver.exe";
 		}
 		// Geckodriver
