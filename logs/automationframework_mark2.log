@@ -1,0 +1,17 @@
+[14/08/18 10:18:42:238] [INFO] br.com.fernando.automationframework.suites.SuiteTest - === Iniciando Framework de Testes ===
+[14/08/18 10:18:42:249] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 10:18:42:395] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[14/08/18 10:18:42:397] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[14/08/18 10:18:42:415] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[14/08/18 10:18:42:416] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[14/08/18 10:18:47:258] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[14/08/18 10:18:50:489] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[14/08/18 10:18:51:218] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_101842.html
+[14/08/18 10:18:51:352] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 10:18:52:090] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 10:18:52:092] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Verficar Nome So
+[14/08/18 10:18:52:092] [INFO] br.com.fernando.automationframework.tests.SoTest - Iniciando teste de verificaÃ§Ã£o do sistema operacional
+[14/08/18 10:18:52:093] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Verficar Nome So
+[14/08/18 10:18:52:093] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Verficar Nome So
+[14/08/18 10:18:52:201] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_101852.html
+[14/08/18 10:18:52:267] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
