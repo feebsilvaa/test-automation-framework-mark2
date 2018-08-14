@@ -52,7 +52,9 @@ public class ModelTest extends BaseTest {
 	}
 
 	@Test
-	public void deve_acessar_pagina(@Param(name = "tituloPagina") String tituloPagina) throws Exception {
+	public void deve_acessar_pagina(
+			@Param(name = "tituloPagina") String tituloPagina
+			) throws Exception {
 		test = extent.createTest(nomeCenario.toString(), "Este teste realiza acesso à aplicação web Mark7 Herokuapp");
 
 		String title = page.tituloPagina();

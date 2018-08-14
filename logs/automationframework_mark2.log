@@ -15,3 +15,90 @@
 [14/08/18 10:18:52:093] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Verficar Nome So
 [14/08/18 10:18:52:201] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_101852.html
 [14/08/18 10:18:52:267] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:35:27:121] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:35:27:289] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:35:27:291] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:35:27:295] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:35:27:295] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:35:27:975] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_163527.html
+[14/08/18 16:35:28:868] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:37:08:722] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:37:08:982] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:37:08:985] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:37:37:856] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:37:37:868] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:38:00:312] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_163708.html
+[14/08/18 16:38:00:658] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:40:46:196] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:40:46:407] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:40:46:411] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:40:46:422] [ERROR] br.com.fernando.automationframework.tests.MassaCsvTest - Ocorreu um erro ao comparar o resultado esperado com o encontrado
+[14/08/18 16:40:46:422] [ERROR] br.com.fernando.automationframework.tests.MassaCsvTest - expected:<1> but was:<0>
+[14/08/18 16:40:46:423] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:40:46:423] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:40:46:817] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_164046.html
+[14/08/18 16:40:46:986] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:44:50:496] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:44:50:649] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:44:50:687] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:44:50:687] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:44:50:699] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_164450.html
+[14/08/18 16:45:30:097] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:45:30:288] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:45:30:334] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:45:30:351] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:45:30:351] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:45:30:756] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_164530.html
+[14/08/18 16:45:30:924] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:48:13:514] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:48:13:683] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:48:13:706] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv separados por vírgula
+[14/08/18 16:48:13:722] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:48:13:723] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:48:14:099] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:48:14:100] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:48:14:101] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:48:14:101] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:48:14:202] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_164813.html
+[14/08/18 16:48:14:350] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:48:32:240] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:48:32:400] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:48:32:427] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv separados por vírgula
+[14/08/18 16:48:32:441] [ERROR] br.com.fernando.automationframework.tests.MassaCsvTest - Ocorreu um erro ao comparar o resultado esperado com o encontrado
+[14/08/18 16:48:32:442] [ERROR] br.com.fernando.automationframework.tests.MassaCsvTest - [ERRO] - Erro ao realizar comparação. Esperava [Arquivo Csv separado com vírgula acesdsado com sucesso] mas encontrei [Arquivo Csv separado com vírgula acessado com sucesso].
+[14/08/18 16:48:32:446] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:48:32:447] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:48:32:860] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:48:32:873] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:48:32:877] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:48:32:879] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:48:32:955] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_164832.html
+[14/08/18 16:48:33:099] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:50:02:057] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:50:02:236] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:50:02:262] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv separados por vírgula
+[14/08/18 16:50:02:280] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:50:02:280] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:50:02:642] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:50:02:644] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:50:02:644] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:50:02:644] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:50:02:742] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv Separados Por Ponto E Virgula
+[14/08/18 16:50:02:743] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv Separados Por Ponto E Virgula
+[14/08/18 16:50:02:743] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv Separados Por Ponto E Virgula
+[14/08/18 16:50:02:796] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_165002.html
+[14/08/18 16:50:02:951] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[14/08/18 16:51:49:462] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[14/08/18 16:51:49:642] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:51:49:668] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv separados por vírgula
+[14/08/18 16:51:49:685] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:51:49:685] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv Separados Por Virgula
+[14/08/18 16:51:50:058] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv
+[14/08/18 16:51:50:059] [INFO] br.com.fernando.automationframework.tests.MassaCsvTest - Iniciando teste de consumo de massa de dados via csv
+[14/08/18 16:51:50:060] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv
+[14/08/18 16:51:50:060] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv
+[14/08/18 16:51:50:149] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Consumir Dados Csv Separados Por Ponto E Virgula
+[14/08/18 16:51:50:151] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando teste: Deve Consumir Dados Csv Separados Por Ponto E Virgula
+[14/08/18 16:51:50:151] [INFO] br.com.fernando.automationframework.core.BaseTest - Salvando report HTML: Deve Consumir Dados Csv Separados Por Ponto E Virgula
+[14/08/18 16:51:50:208] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_14082018_165149.html
+[14/08/18 16:51:50:359] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos

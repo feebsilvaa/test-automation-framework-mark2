@@ -1,0 +1,6 @@
+deve_consumir_dados_csv,dado,Duration(ms)
+"",Arquivo Csv acessado com sucesso,0.0
+deve_consumir_dados_csv_separados_por_virgula,dado,Duration(ms)
+"",Arquivo Csv separado com virgula acessado com sucesso,11.0
+deve_consumir_dados_csv_separados_por_ponto_e_virgula;dado
+";""Arquivo Csv separado com ponto e virgula acessado com sucesso"""

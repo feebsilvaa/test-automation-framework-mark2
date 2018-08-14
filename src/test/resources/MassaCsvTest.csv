@@ -1,0 +1,8 @@
+deve_consumir_dados_csv,dado
+						,"Arquivo Csv acessado com sucesso"
+
+deve_consumir_dados_csv_separados_por_virgula,dado
+						,"Arquivo Csv separado com virgula acessado com sucesso"
+
+deve_consumir_dados_csv_separados_por_ponto_e_virgula;dado
+						;"Arquivo Csv separado com ponto e virgula acessado com sucesso"
