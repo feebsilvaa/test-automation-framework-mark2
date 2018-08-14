@@ -8,6 +8,10 @@ Framework de Automação de Testes Funcionais para aplicações Web
 
 ## Releases
 
+### AutoFrameMark2 1.0.0 Release
+- Report HTML
+- Arquivo de Log
+
 ## Getting Started
 
 Manual de instalação para execução do Framework
