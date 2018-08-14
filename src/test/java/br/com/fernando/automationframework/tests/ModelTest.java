@@ -2,8 +2,11 @@ package br.com.fernando.automationframework.tests;
 
 import static br.com.fernando.automationframework.core.DriverFactory.getDriver;
 import static br.com.fernando.automationframework.core.DriverFactory.killDriver;
+import static br.com.fernando.automationframework.support.DataHoraGen.dataHoraParaArquivo;
 import static br.com.fernando.automationframework.support.ErrMsgGen.comparisonErrorMessage;
+import static br.com.fernando.automationframework.support.HTMLReportGen.htmlReportConfig;
 import static com.aventstack.extentreports.Status.FAIL;
+import static org.apache.commons.lang.WordUtils.capitalizeFully;
 
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
@@ -14,6 +17,8 @@ import org.junit.Before;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import com.aventstack.extentreports.Status;
 
 import br.com.fernando.automationframework.core.BaseTest;
 import br.com.fernando.automationframework.core.FrameworkProperties;
@@ -26,12 +31,18 @@ public class ModelTest extends BaseTest {
 	private Page page = new Page();
 
 	@Before
-	public void setupTest() {
+	public void setupTest() {		
 		getDriver();
 	}
 
 	@After
-	public void tearDownTest() {
+	public void tearDownTest() throws Exception {
+		try {
+			extent.flush();
+		} catch (Exception e) {
+			test.log(Status.FAIL, e.getMessage());
+			throw e;
+		}
 		if (FrameworkProperties.CLOSE_BROWSER) {
 			killDriver();
 		}

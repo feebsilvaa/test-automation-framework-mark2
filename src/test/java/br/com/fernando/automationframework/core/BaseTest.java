@@ -1,7 +1,5 @@
 package br.com.fernando.automationframework.core;
 
-import static br.com.fernando.automationframework.core.DriverFactory.getDriver;
-import static br.com.fernando.automationframework.core.DriverFactory.killDriver;
 import static br.com.fernando.automationframework.support.DataHoraGen.dataHoraParaArquivo;
 import static br.com.fernando.automationframework.support.HTMLReportGen.htmlReport;
 import static br.com.fernando.automationframework.support.HTMLReportGen.htmlReportConfig;
@@ -56,9 +54,9 @@ public class BaseTest {
 
 	@AfterClass
 	public static void tearDownClass() throws IOException {
-		killWindowsProccess();
 		// Ao final do teste abre o arquivo de report HTML
 		Desktop.getDesktop().open(new File(reportName));
+		killWindowsProccess();
 	}
 
 	@Before
