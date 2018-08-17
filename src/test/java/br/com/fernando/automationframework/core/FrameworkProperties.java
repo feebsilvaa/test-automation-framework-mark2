@@ -4,12 +4,13 @@ public class FrameworkProperties {
 
     public static boolean CLOSE_BROWSER = true;
 
-    public static Browsers BROWSER = Browsers.GOOGLE_CHROME;
+    public static Browsers BROWSER = Browsers.GOOGLE_CHROME_HEADLESS;
 
     public static TipoExecucao TIPO_EXECUCAO = TipoExecucao.LOCAL;
 
     public enum Browsers {
         GOOGLE_CHROME,
+        GOOGLE_CHROME_HEADLESS,
         MOZILLA_FIREFOX,
         MICROSOFT_EDGE,
         INTERNET_EXPLORER
