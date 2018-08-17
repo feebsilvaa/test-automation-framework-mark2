@@ -1,2 +1,5 @@
-deve_acessar_pagina,tituloPagina,Duration(ms),Duration(ms),Duration(ms),Duration(ms)
-"",mark7,45.0,45.0,45.0,45.0
+deve_acessar_pagina,tituloPagina
+													,"mark7"												
+													
+deve_realizar_login,login,senha
+								,"bsilva.fe@gmail.com","123456"
