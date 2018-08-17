@@ -40,19 +40,22 @@ public class Screenshot {
 		ImageIO.write(screenCapturedImage, "png", new File(path.toString()));
 	}
 
-	public static void takeAScreenshot(String methodName) throws IOException {
+	public static String takeAScreenshot() throws IOException {
 		TakesScreenshot ss = (TakesScreenshot) getDriver();
 		File arquivo = ss.getScreenshotAs(OutputType.FILE);
 
+		String format = ".png";
+
 		// Salva somente a primeira parte da String
-		StringBuilder picname = new StringBuilder(methodName.split("\\{")[0]);
-		// Acrescenta data e hora ao restante do nome da foto
-		picname.append("_").append(Generator.dataHoraParaArquivo());
+		StringBuilder picname = new StringBuilder("autoframemark2_print").append(format);
 
-		StringBuilder path = new StringBuilder();
-		path.append("report").append(File.separator).append(picname).append(".png");
+		//StringBuilder path = new StringBuilder();
+		//path.append("report").append(File.separator).append("html").append(File.separator).append(picname);
+		//path.append(picname);
+		
+		FileUtils.copyFile(arquivo, new File(picname.toString()));
 
-		FileUtils.copyFile(arquivo, new File(path.toString()));
+		return picname.toString();
 	}
 
 	public static byte[] screenshotByte() {
