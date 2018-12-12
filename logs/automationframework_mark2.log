@@ -46,3 +46,129 @@
 [17/08/18 15:24:34:945] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
 [17/08/18 15:24:35:570] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_17082018_152407.html
 [17/08/18 15:24:35:734] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[27/08/18 14:02:43:808] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[27/08/18 14:02:44:057] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:02:44:060] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:02:44:095] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:02:44:095] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:02:49:493] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:02:52:894] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:02:53:536] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:02:53:537] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:02:53:538] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:02:53:538] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:02:56:791] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:03:01:225] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:03:01:839] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Realizar Login
+[27/08/18 14:03:01:839] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:03:01:839] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:03:01:839] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:03:05:032] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:03:11:362] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:03:11:954] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_27082018_140243.html
+[27/08/18 14:03:12:194] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[27/08/18 14:04:00:441] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[27/08/18 14:04:00:637] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:04:00:640] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:04:00:655] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:04:00:655] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:04:05:435] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:04:11:346] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:04:12:011] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:04:12:012] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:04:12:012] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:04:12:012] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:04:15:515] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:04:18:204] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:04:18:828] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Realizar Login
+[27/08/18 14:04:18:829] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:04:18:830] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:04:18:830] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:04:22:574] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:04:28:744] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:04:29:337] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_27082018_140400.html
+[27/08/18 14:04:29:544] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[27/08/18 14:05:40:261] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[27/08/18 14:05:40:444] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:05:40:449] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:05:40:464] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:05:40:464] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:05:45:862] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:05:49:837] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:05:50:473] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:05:50:474] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:05:50:476] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:05:50:476] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:05:54:245] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:05:57:149] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:05:57:749] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Realizar Login
+[27/08/18 14:05:57:750] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:05:57:750] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:05:57:750] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:06:01:439] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:06:08:132] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:06:08:722] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_27082018_140540.html
+[27/08/18 14:06:08:956] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[27/08/18 14:07:09:930] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[27/08/18 14:07:10:122] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:07:10:125] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:07:10:144] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:07:10:144] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:07:15:564] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:07:19:440] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:07:20:061] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:07:20:064] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:07:20:066] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:07:20:066] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:07:23:787] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:07:26:712] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:07:27:308] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Realizar Login
+[27/08/18 14:07:27:308] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:07:27:308] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:07:27:309] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:07:31:054] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:07:37:564] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:07:38:164] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_27082018_140709.html
+[27/08/18 14:07:38:401] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[27/08/18 14:08:03:930] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[27/08/18 14:08:04:154] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:08:04:158] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:08:04:180] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:08:04:180] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:08:09:560] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:08:13:602] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:08:14:231] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:08:14:232] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:08:14:232] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:08:14:232] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:08:17:979] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:08:20:988] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:08:21:607] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Realizar Login
+[27/08/18 14:08:21:608] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:08:21:610] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:08:21:611] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:08:25:314] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:08:31:916] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:08:32:503] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_27082018_140803.html
+[27/08/18 14:08:32:723] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
+[27/08/18 14:08:59:748] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando report HTML
+[27/08/18 14:08:59:979] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:08:59:982] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:09:00:001] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:09:00:002] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:09:06:195] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:09:09:295] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:09:09:942] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Acessar Pagina
+[27/08/18 14:09:09:942] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:09:09:943] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:09:09:943] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:09:13:425] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:09:16:285] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:09:17:006] [INFO] br.com.fernando.automationframework.core.BaseTest - Inicializando setup do teste: Deve Realizar Login
+[27/08/18 14:09:17:006] [INFO] br.com.fernando.automationframework.tests.ModelTest - Abrindo navegador
+[27/08/18 14:09:17:006] [INFO] br.com.fernando.automationframework.core.DriverFactory - Iniciando configuração de execucao local do driver.
+[27/08/18 14:09:17:007] [INFO] br.com.fernando.automationframework.core.DriverFactory - Chromedriver Ghost Mode
+[27/08/18 14:09:20:854] [INFO] br.com.fernando.automationframework.core.DriverFactory - Acessando url: https://mark7.herokuapp.com/login
+[27/08/18 14:09:26:852] [INFO] br.com.fernando.automationframework.core.DriverFactory - Finalizando driver
+[27/08/18 14:09:27:458] [INFO] br.com.fernando.automationframework.core.BaseTest - Exibindo report HTML: report\html\ReportHtml_27082018_140859.html
+[27/08/18 14:09:27:768] [INFO] br.com.fernando.automationframework.core.BaseTest - Finalizando processos
