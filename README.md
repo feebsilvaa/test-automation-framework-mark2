@@ -3,7 +3,6 @@
 Framework de Automação de Testes Funcionais para aplicações Web
 - Report HTML
 - Arquivo de Log
-- Massa de dados via planilha csv
 - Print do resultado final no report html
 
 ## Plan on Trello
@@ -14,6 +13,7 @@ Framework de Automação de Testes Funcionais para aplicações Web
 #### AutoFrameMark2 1.0.0 Release
 - Report HTML
 - Arquivo de Log
+- Print do resultado final no report html
 
 ## Getting Started
 
